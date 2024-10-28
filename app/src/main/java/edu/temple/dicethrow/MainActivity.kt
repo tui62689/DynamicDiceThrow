@@ -36,12 +36,15 @@ class MainActivity : AppCompatActivity(), ButtonFragment.ButtonInterface {
         val buttonFragment = ButtonFragment()
         val dieViewModel = ViewModelProvider(this)[DieViewModel::class.java]
 
-        if(containers == null){
-            supportFragmentManager.beginTransaction().add(R.id.container1, buttonFragment)
-                .addToBackStack(null).setReorderingAllowed(true).commit()
+        if(savedInstanceState == null){
+            supportFragmentManager.beginTransaction()
+                .add(R.id.container1, buttonFragment)
+                .addToBackStack(null)
+                .setReorderingAllowed(true).commit()
         }
         if(containers){
-            supportFragmentManager.beginTransaction().add(R.id.container2, DieFragment())
+            supportFragmentManager.beginTransaction()
+                .add(R.id.container2, DieFragment())
                 .commit()
         }
 
