@@ -7,6 +7,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container1"
+        android:name="edu.temple.dicethrow.ButtonFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,6 +18,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container2"
+        android:name="edu.temple.dicethrow.DieFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
